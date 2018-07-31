@@ -1,0 +1,33 @@
+{
+  "name": "@tech_query/promise",
+  "version": "1.0.0",
+  "description": "Promise/A+ implement based on ES 6+ & Babel",
+  "keywords": [
+    "promise",
+    "polyfill",
+    "ecmascript",
+    "babel"
+  ],
+  "author": "shiy2008@gmail.com",
+  "license": "LGPL-3.0",
+  "homepage": "https://techquery.github.io/Promise/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechQuery/Promise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TechQuery/Promise/issues"
+  },
+  "main": "source/Promise.js",
+  "browser": "dist/Promise.js",
+  "scripts": {
+    "build": "amd-bundle source/adapter dist/Promise",
+    "test": "promises-aplus-tests dist/Promise",
+    "precommit": "npm run build  &&  git add ."
+  },
+  "devDependencies": {
+    "amd-bundle": "^1.3.2",
+    "husky": "^0.14.3",
+    "promises-aplus-tests": "^2.1.2"
+  }
+}
